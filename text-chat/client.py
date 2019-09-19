@@ -82,8 +82,7 @@ class ChatFrame(wx.Frame):
 
     def lookUsers(self, event):
         # 查看当前在线用户
-        # con.write(b'look\n')
-        con.write(b'logout\n')
+        con.write(b'look\n')
 
     def close(self, event):
         # 关闭窗口
