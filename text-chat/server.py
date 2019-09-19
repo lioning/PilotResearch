@@ -45,12 +45,19 @@ class ChatSession(asynchat.async_chat):
         self.enter(LoginRoom(server))
 
     def enter(self, room):
+        #一个session属于一个 room， session.room 是所属的聊天室
+        # 从当前房间移除自身，然后添加到指定房间。
+        self.leave_current_room()
+        self.enter_room(room)
+    def leave_current_room(self):
         try:
             cur_room = self.room
         except AttributeError:
             pass
         else:
             cur_room.remove(self)
+
+    def enter_room(self, room):
         self.room = room
         room.add(self)
 
