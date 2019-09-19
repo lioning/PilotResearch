@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# unnecessary files in text-chat 
+text-chat/.vscode
+text-chat/dot
+text-chat/uml-pic
+text-chat/*.code-workspace
