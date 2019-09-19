@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+*.pyc
 
 # 工程文件
 *.vscode
